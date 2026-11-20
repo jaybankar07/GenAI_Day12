@@ -1,0 +1,21 @@
+
+name: My First Runner Demo
+
+on:
+  workflow_dispatch:
+
+jobs:
+  my-first-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Print Message
+        run: echo "Hello Everyone!"
+
+      - name: Check Python
+        run: python --version
+
+      - name: Run Python Code
+        run: |
+          python -c "print('Hello from GitHub Runner!')"
+          python -c "print('Addition:', 10 + 20)"
